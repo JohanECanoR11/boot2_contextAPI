@@ -9,8 +9,7 @@ export const AppRouter = () => {
 
 
       {/* Configurar rutas */}
-      <Routes>        
-      </Routes>
+      <Routes>              
         <Route path='/' element={<Home />}></Route>
         <Route path='/inicio' element={<Home />}></Route>
         <Route path='/articulos' element={<Articles />}></Route>
@@ -21,6 +20,7 @@ export const AppRouter = () => {
             </div>
           )
         }></Route>
+      </Routes>
     </Router>
   )
 }
