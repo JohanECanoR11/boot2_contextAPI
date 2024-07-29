@@ -2,8 +2,8 @@
 export const Articles = () => {
   return (
     <div>
-      <h2>Artículos</h2>
-      div
+      <h1>Artículos</h1>
+      <p>Esta es la página de artículos</p>
     </div>
   )
 }
