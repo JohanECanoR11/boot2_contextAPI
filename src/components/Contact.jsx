@@ -1,5 +1,5 @@
 
-export const Contacto = () => {
+export const Contact = () => {
   return (
     <div>Contacto</div>
   )

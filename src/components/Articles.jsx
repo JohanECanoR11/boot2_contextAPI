@@ -1,6 +1,9 @@
 
 export const Articles = () => {
   return (
-    <div>Articles</div>
+    <div>
+      <h2>Artículos</h2>
+      div
+    </div>
   )
 }
