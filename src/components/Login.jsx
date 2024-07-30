@@ -5,7 +5,7 @@ export const Login = () => {
 
   // Extraemos user y setUser del contexto usando useContext
   const { setUser } = useContext(Context);
-  const [username, setUserName] = useState('');
+  const [username, setUsername] = useState('');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
 

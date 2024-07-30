@@ -3,14 +3,15 @@ import { Home } from "../components/Home";
 import { Articles } from "../components/Articles";
 import { ErrorPage } from "../components/ErrorPage";
 import { About } from "../components/About";
-import { Contact} from "../components/Contact";
-import { Login} from "../components/Login";
+import { Contact } from "../components/Contact";
+import { Login } from "../components/Login";
+import { ArticleDetail } from "../components/ArticleDetail";
 import logo from '../assets/logo.png';
 import { useContext } from "react";
-import { Context } from "../context/Context"
+import { Context } from "../context/Context";
+import { DarkMode } from "../components/DarkMode";
 
 export const AppRouter = () => {
-
   const { user, setUser } = useContext(Context);
 
   return (
@@ -52,7 +53,9 @@ export const AppRouter = () => {
                 <NavLink to='/login'>Identifícate</NavLink>
               </li>
             )}
-
+            <li>
+              <DarkMode />
+            </li>
           </ul>
         </nav>
       </header>
@@ -61,11 +64,12 @@ export const AppRouter = () => {
         <Route path='/' element={<div className="content"><Home /></div>}></Route>
         <Route path='/inicio' element={<div className="content"><Home /></div>}></Route>
         <Route path='/articulos' element={<div className="content"><Articles /></div>}></Route>
+        <Route path='/article/:id' element={<div className="content"><ArticleDetail /></div>}></Route>
         <Route path='/acerca-de' element={<div className="content"><About /></div>}></Route>
         <Route path='/contacto' element={<div className="content"><Contact /></div>}></Route>
         <Route path='/login' element={<div className="content"><Login /></div>}></Route>
-        <Route path='*' element={<ErrorPage />}></Route>
+        <Route path='*' element={<div className="error-page"><ErrorPage /></div>}></Route>
       </Routes>
     </Router>
-  )
-}
+  );
+};
